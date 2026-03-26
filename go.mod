@@ -4,7 +4,7 @@ go 1.24.0
 
 require (
 	github.com/spf13/cobra v1.4.0
-	go.k6.io/k6 v1.6.0
+	go.k6.io/k6 v1.6.1
 )
 
 require (
