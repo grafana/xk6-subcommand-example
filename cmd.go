@@ -3,7 +3,7 @@ package example
 
 import (
 	"github.com/spf13/cobra"
-	"go.k6.io/k6/cmd/state"
+	"go.k6.io/k6/v2/cmd/state"
 )
 
 // newSubcommand creates the "example" subcommand for the xk6 extension.
