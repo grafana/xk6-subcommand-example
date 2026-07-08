@@ -1,6 +1,8 @@
 package example
 
 import (
+	"fmt"
+
 	"github.com/spf13/cobra"
 	"go.k6.io/k6/v2/cmd/state"
 )
@@ -22,9 +24,9 @@ Customize the greeting by specifying a name with the --name flag.
 
 	name := cmd.Flags().StringP("name", "n", "User", "Name of the person to greet")
 
-	cmd.RunE = func(cmd *cobra.Command, args []string) error {
-		println("Hello, " + *name + "! Happy subcommanding with k6!")
-		return nil
+	cmd.RunE = func(cmd *cobra.Command, _ []string) error {
+		_, err := fmt.Fprintln(cmd.OutOrStdout(), "Hello, "+*name+"! Happy subcommanding with k6!")
+		return err
 	}
 
 	return cmd
