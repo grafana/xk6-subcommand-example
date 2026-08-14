@@ -2,7 +2,7 @@ module github.com/grafana/xk6-subcommand-example
 
 go 1.25.0
 
-toolchain go1.25.12
+toolchain go1.26.6
 
 require (
 	github.com/spf13/cobra v1.4.0
